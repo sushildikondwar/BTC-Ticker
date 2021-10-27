@@ -1,0 +1,40 @@
+body {
+    color: white;
+    text-align: center;
+    align-items: center;
+    background-image: url(https://research.binance.com/static/images/meta.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#counter {
+    position: fixed;
+    top: 5px;
+    left: 10px;
+}
+
+#tableData {
+    margin: auto;
+    background-color: rgba(92, 75, 21, 0.4);
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+table,
+td {
+    padding: 1%;
+    border-bottom: 1px solid rgb(243, 229, 189);
+    text-align: center;
+}
+
+th {
+    padding: 5px;
+    border-right: 2px solid rgb(31, 28, 2);
+}
+
+h4 {
+    color: whitesmoke;
+    top: 5px;
+    right: 10px;
+    position: fixed;
+}
