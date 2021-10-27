@@ -13,12 +13,17 @@ body {
     position: fixed;
     top: 5px;
     left: 10px;
-    background-color: rgba(0, 0, 0, 0.534);
+    background-color: rgba(0, 0, 0, 0.699);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 #tableData {
     margin: auto;
-    background-color: rgba(92, 75, 21, 0.4);
+    background-color: rgba(92, 75, 21, 0.5);
     font-family: 'Balsamiq Sans', cursive;
 }
 
@@ -43,7 +48,7 @@ th {
     border-right: 2px solid rgb(31, 28, 2);
 }
 
-h4 {
+#owner {
     color: whitesmoke;
     top: 5px;
     right: 10px;
