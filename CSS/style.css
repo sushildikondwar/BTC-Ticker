@@ -9,9 +9,11 @@ body {
 }
 
 #counter {
+    padding: 1%;
     position: fixed;
     top: 5px;
     left: 10px;
+    background-color: rgba(0, 0, 0, 0.534);
 }
 
 #tableData {
@@ -25,6 +27,15 @@ td {
     padding: 1%;
     border-bottom: 1px solid rgb(243, 229, 189);
     text-align: center;
+}
+
+td:nth-child(5) {
+    color: red;
+}
+
+td:nth-child(6) {
+    color: red;
+    font-weight: bold;
 }
 
 th {

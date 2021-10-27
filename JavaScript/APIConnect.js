@@ -16,8 +16,8 @@ fetch('https://api2.binance.com/api/v3/ticker/24hr').then((rawData) => rawData.j
             newRow.insertCell(1).appendChild(symbol);
             newRow.insertCell(2).appendChild(highprice);
             newRow.insertCell(3).appendChild(lowprice);
-            newRow.insertCell(4).appendChild(lastprice);
-            newRow.insertCell(5).appendChild(volume);
+            newRow.insertCell(4).appendChild(volume);
+            newRow.insertCell(5).appendChild(lastprice);
         }
         index++;
     }
@@ -33,8 +33,24 @@ setInterval(() => {
                 tableID.rows[index + 1].cells[1].innerHTML = data[index].symbol;
                 tableID.rows[index + 1].cells[2].innerHTML = data[index].highPrice;
                 tableID.rows[index + 1].cells[3].innerHTML = data[index].lowPrice;
-                tableID.rows[index + 1].cells[4].innerHTML = data[index].lastPrice;
-                tableID.rows[index + 1].cells[5].innerHTML = data[index].volume;
+                
+                if (tableID.rows[index + 1].cells[4].innerHTML < data[index].volume) {
+                    tableID.rows[index + 1].cells[4].innerHTML = data[index].volume;
+                    tableID.rows[index + 1].cells[4].style.color = "green";
+                }
+                else {
+                    tableID.rows[index + 1].cells[4].innerHTML = data[index].volume;
+                    tableID.rows[index + 1].cells[4].style.color = "red";
+                }
+
+                if (tableID.rows[index + 1].cells[5].innerHTML < data[index].lastPrice) {
+                    tableID.rows[index + 1].cells[5].innerHTML = data[index].lastPrice;
+                    tableID.rows[index + 1].cells[5].style.color = "green";
+                }
+                else {
+                    tableID.rows[index + 1].cells[5].innerHTML = data[index].lastPrice;
+                    tableID.rows[index + 1].cells[5].style.color = "red";
+                }
             }
             index++;
         }
